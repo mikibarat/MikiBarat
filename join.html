@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Miki Barát">
+  <meta name="description" content="StreetIQ Basketball - kosárlabdázni vágyók közösségi oldala.">
+  <link rel="icon" type="image/png" href="img/basketball-favicon.jpg">
+  <title>StreetIQ Basketball - Csatlakozz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Csatlakozz a StreetIQ Basketball pickup ligához és számold ki a statjaidat a kosárlabda statisztika kalkulátorral.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+  <script src="validation.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-ball">🏀</span>
+      <span class="logo-text">STREETIQ BASKETBALL</span>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menü megnyitása">
+      ☰
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <ul>
+        <li><a href="index.html">Főoldal</a></li>
+        <li><a href="players.html">Játékosok</a></li>
+        <li><a href="gallery.html">Galéria</a></li>
+        <li><a href="join.html" class="active">Csatlakozz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Csatlakozz a pickup ligához</h1>
+      <p>
+        Ha szívesen játszanál szervezett, mégis kötetlen hangulatú kosármeccseken, töltsd ki
+        az alábbi űrlapot. Az adatok alapján felvesszük veled a kapcsolatot a következő esemény előtt.
+      </p>
+    </section>
+
+    <section class="section light">
+      <h2 align="center">Jelentkezési űrlap</h2>
+      <form id="join-form" novalidate>
+        <div class="form-row">
+          <label for="name">Teljes név*</label>
+          <input type="text" id="name" name="name" placeholder="Pl. Kovács Bence">
+          <span class="error-message" id="name-error"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email cím*</label>
+          <input type="email" id="email" name="email" placeholder="te@pelda.hu">
+          <span class="error-message" id="email-error"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Telefonszám*</label>
+          <input type="tel" id="phone" name="phone" placeholder="+36...">
+          <span class="error-message" id="phone-error"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="date">Preferált dátum*</label>
+          <input type="date" id="date" name="date">
+          <span class="error-message" id="date-error"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="time">Preferált idősáv*</label>
+          <input type="time" id="time" name="time">
+          <span class="error-message" id="time-error"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="level">Játékos szint*</label>
+          <select id="level" name="level">
+            <option value="">Válassz...</option>
+            <option value="beginner">Kezdő - most ismerkedem</option>
+            <option value="intermediate">Középhaladó - játszom rendszeresen</option>
+            <option value="advanced">Haladó - verseny / liga tapasztalat</option>
+          </select>
+          <span class="error-message" id="level-error"></span>
+        </div>
+
+        <fieldset class="form-row">
+          <legend>Kedvenc szerepkör</legend>
+          <div class="inline-options">
+            <label><input type="radio" name="role" value="guard"> Guard</label>
+            <label><input type="radio" name="role" value="wing"> Wing</label>
+            <label><input type="radio" name="role" value="big"> Big</label>
+          </div>
+        </fieldset>
+
+        <div class="form-row">
+          <label for="height">Magasság (cm)</label>
+          <input type="number" id="height" name="height" min="140" max="230" placeholder="Pl. 185">
+          <span class="error-message" id="height-error"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="notes">Extra információ (sérülés, preferált pozíció stb.)</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Ide írhatsz minden olyan információt, ami hasznos lehet a szervezéshez."></textarea>
+        </div>
+
+        <div class="form-row checkbox-row">
+          <label>
+            <input type="checkbox" id="terms" name="terms">
+            Elfogadom, hogy az adataimat a szervezéshez felhasználjátok.*
+          </label>
+          <span class="error-message" id="terms-error"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Jelentkezem</button>
+        <p class="form-success" id="form-success"></p>
+      </form>
+    </section>
+
+    <section class="section dark" id="stats-tool">
+      <div class="section-header">
+        <h2>Stat Kalkulátor</h2>
+        <p>
+          Add meg néhány mérkőzés összesített adatait, és a kalkulátor kiszámolja a
+          pont, lepattanó és gólpassz átlagodat meccsenként.
+        </p>
+      </div>
+
+      <div class="stats-layout">
+        <div class="stats-form">
+          <div class="form-row">
+            <label for="games">Lejátszott meccsek száma*</label>
+            <input type="number" id="games" min="1" placeholder="Pl. 5">
+          </div>
+          <div class="form-row">
+            <label for="total-points">Összes pont (összes meccs együtt)*</label>
+            <input type="number" id="total-points" min="0" placeholder="Pl. 72">
+          </div>
+          <div class="form-row">
+            <label for="total-rebounds">Összes lepattanó*</label>
+            <input type="number" id="total-rebounds" min="0" placeholder="Pl. 38">
+          </div>
+          <div class="form-row">
+            <label for="total-assists">Összes gólpassz*</label>
+            <input type="number" id="total-assists" min="0" placeholder="Pl. 21">
+          </div>
+          <button type="button" id="calc-btn" class="btn btn-secondary">Átlagok kiszámítása</button>
+          <p class="error-message" id="stats-error"></p>
+        </div>
+
+        <div class="stats-results" id="stats-results">
+          <h3>Eredmények</h3>
+          <p>
+            Még nincs kiszámolt adat. Töltsd ki a mezőket, és azonnal megkapod a
+            meccsenkénti átlag statjaidat összefoglalva.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 StreetIQ Basketball</p>
+  </footer>
+</body>
+</html>

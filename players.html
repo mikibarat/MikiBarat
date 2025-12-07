@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Miki Barát">
+  <meta name="description" content="StreetIQ Basketball - kosárlabdázni vágyók közösségi oldala.">
+  <link rel="icon" type="image/png" href="img/basketball-favicon.jpg">
+  <title>StreetIQ Basketball - Játékosok</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StreetIQ Basketball - játékosprofilok, szerepkörök, erősségek és signature move-ok.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+  <script src="validation.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-ball">🏀</span>
+      <span class="logo-text">STREETIQ BASKETBALL</span>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menü megnyitása">
+      ☰
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <ul>
+        <li><a href="index.html">Főoldal</a></li>
+        <li><a href="players.html" class="active">Játékosok</a></li>
+        <li><a href="gallery.html">Galéria</a></li>
+        <li><a href="join.html">Csatlakozz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Játékosprofilok</h1>
+      <p>
+        Néhány példa a magyar kosárlabda válogatott játékosain keresztül arra, hogyan lehet röviden bemutatni a különböző szerepköröket és játékstílusokat
+        a pályán.
+      </p>
+    </section>
+
+    <section class="section light">
+      <div class="players-grid">
+        <article class="player-card">
+          <img src="img/perlzoli.jpg" alt="Perl Zoltán">
+          <h2>Perl Zoltán</h2>
+          <p class="player-role">Irányító (PG)</p>
+          <ul class="player-stats">
+            <li>Átlagpont: 25,7</li>
+            <li>Gólpassz: 5,2</li>
+            <li>Labdavesztés: alacsony</li>
+          </ul>
+          <p class="player-desc">
+            Klasszikus irányító, aki érti a játék ritmusát és jól olvassa a helyzeteket.
+            Fő erőssége a pick-and-roll, az átlátás a pályán, a középtávoli dobások és a csapattársak helyzetbe hozása.
+          </p>
+        </article>
+
+        <article class="player-card">
+          <img src="img/benkeszilu.jpg" alt="Benke Szilárd">
+          <h2>Benke Szilárd</h2>
+          <p class="player-role">Dobóhátvéd (SG)</p>
+          <ul class="player-stats">
+            <li>Triplaszázalék: 41%</li>
+            <li>Catch &amp; shoot helyzetekben megbízható</li>
+            <li>Gyors ritmusváltás támadásban</li>
+          </ul>
+          <p class="player-desc">
+            Elsősorban külső dobásokból él, gyors elengedéssel és jó helyzetfelismeréssel.
+            Akkor érzi jól magát, ha folyamatosan mozgásban van és labda nélkül is dolgozhat.
+          </p>
+        </article>
+
+        <article class="player-card">
+          <img src="img/LukacsNorbi.jpg" alt="Lukács Norbert">
+          <h2>Lukács Norbert</h2>
+          <p class="player-role">Kiscsatár (SF)</p>
+          <ul class="player-stats">
+            <li>Erős egy-egy elleni védekezés</li>
+            <li>Meccsenként átlagosan 3 szerzett labda</li>
+            <li>Rugalmasan vált több poszton</li>
+          </ul>
+          <p class="player-desc">
+            Védekezésben kiemelkedő, stabil lábmunkával és jó időzítéssel.
+            Szívesen fogja az ellenfél legjobb periméter játékosát, és támadásban is hasznos kiegészítő ember.
+          </p>
+        </article>
+
+        <article class="player-card">
+          <img src="img/natereuvers.jpg" alt="Nate Reuvers">
+          <h2>Nate Reuvers</h2>
+          <p class="player-role">Erőcsatár / Center (PF/C)</p>
+          <ul class="player-stats">
+            <li>Lepattanó: 12,4 meccsenként</li>
+            <li>Második esélyből szerzett pontokban erős</li>
+            <li>Stabil palánk alatti jelenlét</li>
+          </ul>
+          <p class="player-desc">
+            Elsősorban a palánk alatti munkát vállalja magára: ütközik, zár, lepattanózik.
+            Nem feltétlen látványos, de fontos szereplő, aki nélkül nehezebb stabilan nyerni.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 StreetIQ Basketball</p>
+  </footer>
+</body>
+</html>

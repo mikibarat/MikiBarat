@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Miki Barát">
+  <meta name="description" content="StreetIQ Basketball - kosárlabdázni vágyók közösségi oldala.">
+  <link rel="icon" type="image/png" href="img/basketball-favicon.jpg">
+  <title>StreetIQ Basketball - Főoldal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StreetIQ Basketball - kosárlabda tippek, edzés, streetball hangulat, pickup meccsek és játékosprofilok.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+  <script src="validation.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-ball">🏀</span>
+      <span class="logo-text">STREETIQ BASKETBALL</span>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menü megnyitása">
+      ☰
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <ul>
+        <li><a href="index.html" class="active">Főoldal</a></li>
+        <li><a href="players.html">Játékosok</a></li>
+        <li><a href="gallery.html">Galéria</a></li>
+        <li><a href="join.html">Csatlakozz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Streetball hangulat, tudatos kosárlabda</h1>
+        <p>
+          A StreetIQ Basketball egy olyan mini platform, ahol a pálya melletti laza hangulat
+          találkozik a tudatos, adatokra épülő játékkal. Ideális mindenki számára, aki
+          szeretne fejlődni, nem csak “lemenni dobálni”.
+        </p>
+        <p>
+          Pickup meccsek, játékosprofilok és egy statisztika kalkulátor segít abban,
+          hogy jobban átlásd a saját játékodat - akár hobbi, akár verseny szinten kosarazol.
+        </p>
+        <div class="hero-buttons">
+          <a href="join.html" class="btn btn-primary">Csatlakozom a pickup ligához</a>
+          <a href="players.html" class="btn btn-secondary">Megnézem a játékosprofilokat</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="img/nightcourt.jpg" alt="Éjszakai streetball pálya reflektorokkal">
+      </div>
+    </section>
+
+    <section class="section light">
+      <div class="section-header">
+        <h2>Mi az a StreetIQ?</h2>
+        <p>
+          Egy kosárlabda témájú weboldal, amely a közösségi játékélményre és a teljesítmény
+          tudatos követésére épít.
+        </p>
+      </div>
+      <div class="features-grid">
+        <article class="card">
+          <h3>Pickup meccsek</h3>
+          <p>
+            Szervezett streetball és pickup mérkőzések városi pályákon, tervezhető időpontokkal
+            és változatos játékosokkal. Jó közeg, fair play, normális tempó.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Játékosprofilok</h3>
+          <p>
+            Rövid, áttekinthető profilok a visszatérő játékosokról: alap statok,
+            preferált szerepkörök és jellemző erősségek, hogy tudd, kivel játszol egy csapatban.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Stat kalkulátor</h3>
+          <p>
+            Egyszerű eszköz, amellyel kiszámolhatod a pont, lepattanó és gólpassz átlagodat
+            meccsekre bontva. Így nem csak érzésre, hanem számok alapján is láthatod a fejlődést.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section dark section-split">
+      <div class="section-image">
+        <img src="img/dunker.jpg" alt="Zsákoló játékos meccs közben">
+      </div>
+      <div class="section-content">
+        <h2>Tudatos játékelemzés a pályán túl</h2>
+        <p>
+          A modern kosárlabdában már nem csak az számít, ki dobja a legtöbb pontot.
+          Fontos a dobásszelekció, a csapaton belüli szerep, a ritmus és a pálya
+          megfelelő széthúzása is.
+        </p>
+        <p>
+          A Stat Kalkulátor abban segít, hogy alap szinten lásd, milyen átlagokat hozol
+          több mérkőzésen keresztül, és hogy melyik területen érdemes tudatosabban fejlődni.
+        </p>
+        <a href="join.html#stats-tool" class="btn btn-outline">Ugrás a Stat Kalkulátorhoz</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 StreetIQ Basketball</p>
+  </footer>
+</body>
+</html>
